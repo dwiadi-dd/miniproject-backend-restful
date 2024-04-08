@@ -1,6 +1,6 @@
-import mysql from "mysql";
+import mysql from "mysql2";
 
-const mysqlConnection = () => {
+export const mysqlConnection = () => {
   return new Promise<mysql.Connection>((resolve, reject) => {
     const connection = mysql.createConnection({
       host: "localhost",
